@@ -1,0 +1,17 @@
+.divOrderAlfbFilter{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.divOrderAlfbFilter label{
+    /* margin-left: 10px; */
+}
+.divOrderAlfbFilter select{
+    /* margin-left: 10px; */
+    height: 30px;
+    width: 100px;
+    outline: none;
+    border-radius: 5px;
+    color: rgb(100, 100, 100);
+}

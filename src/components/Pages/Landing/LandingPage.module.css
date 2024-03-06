@@ -1,0 +1,53 @@
+.divLanding{
+    /* background-color: red; */
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    color: rgb(100, 100, 100);
+}
+.divInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    /* background-color: red; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.divInfo h3{
+    font-weight: 300;
+}
+.divLanding button{
+    width: 150px;
+    height: 30px;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    color: rgb(65, 65, 65);
+    box-shadow: -3px 3px 4px 2px rgba(0, 0, 0, 0.500);
+    font-size: 15px;
+}
+.divLanding button:hover{
+    cursor: pointer;
+    /* border-radius: 0; */
+    transform: scale(1.01);
+    background-color: rgb(240, 240, 240);
+}
+
+@media all and (max-width: 500px) {
+    
+    .divInfo{
+        /* background-color: red; */
+        flex-direction: column;
+        width: 300px;
+        /* background-color: red; */
+    }
+    .divInfo img{
+        width: 200px;
+    }
+}

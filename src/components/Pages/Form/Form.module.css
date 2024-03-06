@@ -1,0 +1,157 @@
+.conteiner{
+    /* background-color: red; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    display: grid;
+    grid-template-columns: 50% 1fr;
+
+    /* max-width: 100vw; */
+    /* min-height: 90vh; */
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.divimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+    width: 100%;
+}
+.divimg img{
+    width: 80%;
+}
+.divimg h3{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background-color: rebeccapurple; */
+    color: rgb(124, 124, 124);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+.divForm{
+    width: 80%;
+    /* background-color: blue; */
+   
+    
+}
+.conteinerCheckbox{
+    display: flex;
+    flex-direction: column;
+    /* width: 400px; */
+    height: 150px;
+    overflow: auto;
+    /* background-color: rgb(243, 211, 211); */
+    box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.300);
+    /* padding: 10px; */
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.labelCheckbox{
+    /* background-color: red; */
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+.labelCheckbox input{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+}
+.error{
+    color: red;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.500);
+    padding: 20px;
+    border-radius: 5px;
+}
+input.inputName {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(100, 100, 100);
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+input.inputDuration{
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(100, 100, 100);
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+input.inputRange{
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    border-radius: 5px;
+    background: #d3d3d3;
+    height: 2px;
+    outline: none;
+    margin: 10px 0;
+}
+select{
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(100, 100, 100);
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+form button{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(100, 100, 100);
+    color: rgb(82, 82, 82);
+    background-color: rgb(255, 255, 255);
+    font-size: 17px;
+    margin-top: 10px;
+}
+form button:hover{
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+}
+@media all and (max-width:700px) {
+    .conteiner{
+        display: grid;
+        grid-template-columns: 1fr; /* Solo una columna para centrar */
+        grid-template-rows: auto;
+        /* padding-top: 10vh; */
+        
+    }
+    .divimg img{
+        width: 0px;
+    }
+    .divForm {
+        width: 100%; /* O ajusta el ancho del formulario como prefieras */
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .divForm form{
+        max-width: 70%;
+    }
+}

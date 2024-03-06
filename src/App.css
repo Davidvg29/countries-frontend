@@ -1,0 +1,38 @@
+/* Estilos para el scrollbar */
+/* Estilo del track */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color del fondo */
+}
+
+/* Estilo del thumb (barra) */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del thumb */
+    border-radius: 10px; /* Radio de borde */
+    
+}
+
+/* Estilo del thumb cuando está en hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cambiar color al hacer hover */
+}
+
+/* Estilo del thumb cuando está activo */
+::-webkit-scrollbar-thumb:active {
+    background-color: #000; /* Cambiar color cuando está activo */
+}
+
+/* Estilo del track cuando está hover */
+::-webkit-scrollbar-track:hover {
+    background-color: #f1f1f1; /* Cambiar color del fondo al hacer hover */
+}
+
+/* Estilo del corner */
+::-webkit-scrollbar-corner {
+    background-color: #ccc; /* Color del corner */
+}
+
+/* Estilo del scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Ancho del scrollbar */
+    height: 5px; /* Altura del scrollbar */
+}
