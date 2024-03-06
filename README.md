@@ -13,7 +13,7 @@ Proyecto web donde se puede visualizar banderas de paises, ver características 
 - Vite
 
 ![Captura de pantalla del proyecto](imagenReadme1.png)
-![Captura de pantalla del proyecto](imagen%readme%2.png)
-![Captura de pantalla del proyecto](imagen%readme%3.png)
-![Captura de pantalla del proyecto](imagen%readme%4.png)
-![Captura de pantalla del proyecto](imagen%readme%5.png)
+![Captura de pantalla del proyecto](imagenReadme2.png)
+![Captura de pantalla del proyecto](imagenReadme3.png)
+![Captura de pantalla del proyecto](imagenReadme4.png)
+![Captura de pantalla del proyecto](imagenReadme5.png)
