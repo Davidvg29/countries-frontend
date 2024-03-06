@@ -12,7 +12,7 @@ Proyecto web donde se puede visualizar banderas de paises, ver características 
 - Axios
 - Vite
 
-![Captura de pantalla del proyecto](imagen readme 1.png)
+![Captura de pantalla del proyecto](/imagen%readme%1.png)
 ![Captura de pantalla del proyecto](imagen%readme%2.png)
 ![Captura de pantalla del proyecto](imagen%readme%3.png)
 ![Captura de pantalla del proyecto](imagen%readme%4.png)
