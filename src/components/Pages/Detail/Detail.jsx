@@ -38,10 +38,10 @@ function Detail(){
                 <img src={countrie.image} alt={countrie.name} />
                     <b>{countrie.id}</b>
                 <div>
-                    <div>Capital: {countrie.capital}</div>
-                    <div>Sub region: {countrie.subRegion}</div>
-                    <div>Area: {countrie.area}</div>
-                    <div>Poblacion: {countrie.population}</div>
+                    <div><b>Capital: </b>{countrie.capital}</div>
+                    <div><b>Sub region: </b>{countrie.subregion}</div>
+                    <div><b>Area: </b>{countrie.area}</div>
+                    <div><b>Poblacion: </b>{countrie.population}</div>
                 </div>
             </div>
 

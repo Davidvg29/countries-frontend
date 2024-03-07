@@ -21,6 +21,7 @@ function Home(){
     },[])
     
     const countries = useSelector((state)=>state.countries)
+    // console.log(countries)
     return(
         <div className={css.conteinerHome}>
             <Header/>

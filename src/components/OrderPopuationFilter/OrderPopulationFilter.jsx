@@ -14,7 +14,7 @@ function OrderPopulationFilter(){
     <div className={css.divOrderPopulationFilter}>
         <label htmlFor="">poblacion: </label>
         <select name="" id="" onChange={handlerOrder}>
-            <option value="default">default</option>
+            <option value="default" hidden>default</option>
             <option value="mayor">mayor</option>
             <option value="menor">menor</option>
         </select>

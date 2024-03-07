@@ -18,17 +18,30 @@ function ActivitiesFilter(){
             dispatch(activitiefilter(e.target.value))            
         
     }
-// console.log(activities)
+console.log(activities)
     return (
         <div className={css.divActivitiesfilter}>
             <label htmlFor="">Actividad: </label>
             <select name="" id="" onChange={handleActivitie}>
-            <option value="all">todos</option>
-                {activities.map((a)=>(
-                    <option key={a.name} value={JSON.stringify(a.Countries)}>{a.name}</option>
-                ))}
+            {activities && typeof activities !== "string" ? (
+    <>
+        <option value="all">todos</option>
+        {activities.map((a) => (
+            <option key={a.name} value={JSON.stringify(a.Countries)}>{a.name}</option>
+        ))}
+    </>
+) : (
+    <option value="">sin actividades</option>
+)}
+
             </select>
         </div>
     )
 }
 export default ActivitiesFilter
+
+{/* <option value="all">todos</option> */}
+
+// activities.map((a)=>(
+//     <option key={a.name} value={JSON.stringify(a.Countries)}>{a.name}</option>
+// ))
