@@ -11,28 +11,29 @@ function Detail(){
     const countrie = useSelector((state)=>state.countries)
     const activities = useSelector((state)=>state.activities)
     const dispatch = useDispatch()
+
+    const [activitiesCountries, setActivitiesCountries] = useState([])
     
     useEffect(()=>{
         dispatch(searchIdCountries(id))
         dispatch(getActivitites())
     },[])
 
-    let activitiesCountries = []
-
-    for (let i = 0; i < activities.length; i++) {
-        for (let j = 0; j < activities[i].Countries.length; j++) {
-            if (activities[i].Countries[j].id===id) {
-                activitiesCountries.push(activities[i])
-            } 
-        }   
-    }
-
-    // console.log(activitiesCountries)
+    useEffect(() => {
+        const filteredActivities = activities.filter(activity => {
+            return activity.Countries.some(country => country.id.toUpperCase() === id.toUpperCase());
+        });
+        setActivitiesCountries(filteredActivities);
+    }, [activities, id]);
 
     return(
         <div className={css.divDetail}>
             <Header/>
-            <div className={css.divCaracteristicas}>
+            {countrie.message ? (
+                <p>{countrie.message}</p>
+            ) : (
+                <>
+                <div className={css.divCaracteristicas}>
                 <h2>{countrie.name}</h2>
                 <div>Continente: {countrie.continent}</div>
                 <img src={countrie.image} alt={countrie.name} />
@@ -48,7 +49,7 @@ function Detail(){
             <div className={css.divActivites}>
                 {activitiesCountries.length>0 ? 
                 activitiesCountries.map((a)=>(
-                    <div className={css.activities}>
+                    <div key={a.name} className={css.activities}>
                         <h4>{a.name}</h4>
                         <div>duracion: {a.duration} hs</div>
                         <div>dificultad: {a.difficulty}</div>
@@ -58,7 +59,8 @@ function Detail(){
                     <p>Este pais no tiene actividades</p>
                 )}
             </div>
-
+            </>
+            )}
         </div>
     )
 }
