@@ -18,7 +18,7 @@ function ActivitiesFilter(){
             dispatch(activitiefilter(e.target.value))            
         
     }
-console.log(activities)
+// console.log(activities)
     return (
         <div className={css.divActivitiesfilter}>
             <label htmlFor="">Actividad: </label>

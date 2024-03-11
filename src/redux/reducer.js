@@ -23,7 +23,7 @@ const reducer = (state = initialStore, {type, payload}) => {
             return {...state, countries: payload, copyCountries: payload};
 
         case SEARCH_NAME_COUNTRIES:
-            return {...state, countries: payload};
+            return {...state, copyCountries: payload};
 
         case SEARCH_ID_COUNTRIES:
             return {...state, countries: payload};
@@ -35,36 +35,47 @@ const reducer = (state = initialStore, {type, payload}) => {
             let filteredByContinent = state.copyCountries;
             if (payload !== "all") {
                 filteredByContinent = state.countries.filter(c => c.continent && c.continent.includes(payload));
+                return {...state, copyCountries: filteredByContinent};
+            }else{
+                return {...state, copyCountries: state.countries};
             }
-            return {...state, countries: filteredByContinent};
+           
 
         case GET_ACTIVITIES:
             return {...state, activities: payload};
 
+
+
         case ACTIVITIES_FILTER:
-            let filteredByActivities = state.countries;
+            let filteredByActivities = state.copyCountries;
             if (payload !== "all") {
                 const idActivitiesCountries = JSON.parse(payload);
-                filteredByActivities = state.countries.filter(c => idActivitiesCountries.some(activity => c.id === activity.id));
+                filteredByActivities = state.copyCountries.filter(c => idActivitiesCountries.some(activity => c.id === activity.id));
+                 return {...state, copyCountries: filteredByActivities};
+            }else{
+                return {...state, copyCountries: state.countries};
+
             }
-            return {...state, countries: filteredByActivities};
+
+
+
 
         case ORDER_ALFABETICAMENTE:
-            let countriesToSortAlphabetically = [...state.countries];
+            let orderAlfb = [...state.copyCountries];
             return {
                 ...state,
-                countries: payload === "asc" ?
-                    countriesToSortAlphabetically.sort((a, b) => a.name.localeCompare(b.name)) :
-                    countriesToSortAlphabetically.sort((a, b) => b.name.localeCompare(a.name))
+                copyCountries: payload === "asc" ?
+                    orderAlfb.sort((a, b) => a.name.localeCompare(b.name)) :
+                    orderAlfb.sort((a, b) => b.name.localeCompare(a.name))
             };
 
         case ORDER_POPULATION:
-            let countriesToSortByPopulation = [...state.countries];
+            let orderPoulation = [...state.copyCountries];
             return {
                 ...state,
-                countries: payload === "mayor" ?
-                    countriesToSortByPopulation.sort((a, b) => b.population - a.population) :
-                    countriesToSortByPopulation.sort((a, b) => a.population - b.population)
+                copyCountries: payload === "mayor" ?
+                    orderPoulation.sort((a, b) => b.population - a.population) :
+                    orderPoulation.sort((a, b) => a.population - b.population)
             };
 
         default:
@@ -73,4 +84,3 @@ const reducer = (state = initialStore, {type, payload}) => {
 };
 
 export default reducer;
-

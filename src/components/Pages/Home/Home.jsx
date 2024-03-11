@@ -20,8 +20,10 @@ function Home(){
         dispatch(getAllCountries())
     },[])
     
-    const countries = useSelector((state)=>state.countries)
+    // const countries = useSelector((state)=>state.countries)
+    const copyCountries = useSelector((state)=>state.copyCountries)
     // console.log(countries)
+    // console.log(copyCountries)
     return(
         <div className={css.conteinerHome}>
             <Header/>
@@ -45,7 +47,7 @@ function Home(){
                     
                 </div>
                 <div className={css.divCard}>
-                    <Card countries={countries}/>
+                    <Card countries={copyCountries}/>
                 </div>
             </div>
         </div>

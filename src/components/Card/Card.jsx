@@ -19,7 +19,7 @@ function Card({countries}) {
 
     // Aplica el filtro al array de países y actualiza el estado de los países filtrados
     useEffect(() => {
-        const subarray = dividirArrayEnSubarrays(countries, 10);
+        const subarray = dividirArrayEnSubarrays(countries, 9);
         setFilteredCountries(subarray.map(sub => sub.filter(c => c))); // Aplica el filtro a cada subarray
         setNumSubarray(0);
         setActiveButton(0);

@@ -1,9 +1,10 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux"
 import { useEffect, useState } from "react"
 import {getActivitites, searchIdCountries} from "../../../redux/actions"
 import css from "./Detail.module.css"
 import Header from "../../Header/Header"
+import home from "../../../assets/home.png"
 
 function Detail(){
 
@@ -29,6 +30,16 @@ function Detail(){
     return(
         <div className={css.divDetail}>
             <Header/>
+            <div className={css.divHome}>
+            <div className={css.home}>
+                <div>
+                    <Link to="/home">
+                    <img src={home} alt="home" />
+                    <div>Home</div>
+                    </Link>
+                </div>
+            </div>
+            </div>
             {countrie.message ? (
                 <p>{countrie.message}</p>
             ) : (

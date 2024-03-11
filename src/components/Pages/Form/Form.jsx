@@ -6,6 +6,8 @@ import Header from "../../Header/Header"
 import css from "./Form.module.css"
 import validate from "./validate"
 import img from "../../../assets/mapa.jpeg"
+import home from "../../../assets/home.png"
+import { Link } from "react-router-dom"
 
 function Form(){
 
@@ -103,12 +105,22 @@ function Form(){
             console.log("completa los campos para crear actividad")
             setErrorSend("completa los campos para crear actividad")
         }
-    }
+    } 
     // console.log(data)
 // console.log(error)
     return(
         <div>
             <Header/>
+            <div className={css.divHome}>
+            <div className={css.home}>
+                <div>
+                    <Link to="/home">
+                    <img src={home} alt="home" />
+                    <div>Home</div>
+                    </Link>
+                </div>
+            </div>
+            </div>
             <div className={css.conteiner}>
                 
                 <div className={css.divimg}>
