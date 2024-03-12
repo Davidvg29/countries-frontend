@@ -48,14 +48,25 @@ const reducer = (state = initialStore, {type, payload}) => {
 
         case ACTIVITIES_FILTER:
             let filteredByActivities = state.copyCountries;
-            if (payload !== "all") {
-                const idActivitiesCountries = JSON.parse(payload);
-                filteredByActivities = state.copyCountries.filter(c => idActivitiesCountries.some(activity => c.id === activity.id));
-                 return {...state, copyCountries: filteredByActivities};
-            }else{
-                return {...state, copyCountries: state.countries};
+            let a = state.countries
 
+            if(filteredByActivities === state.countries){
+                const idActivitiesCountries = JSON.parse(payload);
+                    a = state.countries.filter(c => idActivitiesCountries.some(activity => c.id === activity.id));
+                     return {...state, copyCountries: a};
+            }else{
+                if (payload !== "all") {
+                    const idActivitiesCountries = JSON.parse(payload);
+                    filteredByActivities = state.copyCountries.filter(c => idActivitiesCountries.some(activity => c.id === activity.id));
+                     return {...state, copyCountries: filteredByActivities};
+                }else{
+                    return {...state, copyCountries: state.countries};
+                }
             }
+
+            
+
+            
 
 
 

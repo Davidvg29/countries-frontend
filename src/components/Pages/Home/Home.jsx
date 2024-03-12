@@ -42,7 +42,7 @@ function Home(){
                     </div>
                     <div className={css.divButtonActivitie}>
                         ¡no olvides tu aventura!
-                        <Link to="/form"><button>crear actividad</button></Link>
+                        <Link to="/form"><button>actividades</button></Link>
                     </div>
                     
                 </div>
